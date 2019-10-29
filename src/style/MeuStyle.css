@@ -1,0 +1,21 @@
+
+
+#navbarSKT{
+    background-color: #ff9b21;
+    color: white;
+}
+
+.barra1{
+    margin: 0px;
+    background-color: #eb8f1e;
+    height: 10px;
+}
+
+.nav-item:hover{
+    background-color: #eb8f1e;
+}
+
+.barra2{
+    background-color: #2e66ff;
+    height: 10px;
+}
