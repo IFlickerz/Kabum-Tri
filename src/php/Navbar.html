@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MainPage</title>
+    <link rel="stylesheet" href="../style/MeuStyle.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../style/MultiDropdown.css"> 
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
+        <a class="navbar-brand" href="#">
+            <img src="../img/Kt.png"  width="40" height="40" class="d-inline-block-top mr-2" id="logo">KabumTega
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarKT" >
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="DropdownComputadores" role="button" data-toggle="dropdown" href="#">Computadores</a>
+                    <ul class="dropdown-menu multi-column columns-2" aria-labelledby="DropdownComputadores" style="background-color:#ff9b21;">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="multi-column-dropdown">
+                                    <li><a href="#">Placa de video</a></li>
+                                    <li><a href="#">Placa Mãe</a></li>
+                                    <li><a href="#">Processadores</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="multi-column-dropdown">
+                                    <li><a href="#">Gabinete</a></li>
+                                    <li><a href="#">Cooler</a></li>
+                                    <li><a href="#">LED</a></li>
+                                </ul>
+                            </div>
+                        </div>                  
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Smartphones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Periféricos</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Login/Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="barra1"></div>
+    <div class="barra2"></div>
+    
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script> 
+</body>
+</html>
