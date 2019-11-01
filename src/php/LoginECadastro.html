@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="../style/MeuStyle.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../style/MultiDropdown.css"> 
+</head>
+<body id="pageCadastro">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
+        <a class="navbar-brand" href="#">
+            <img src="../img/Kt.png"  width="40" height="40" class="d-inline-block-top mr-2" id="logo">KabumTega
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarKT" >
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="DropdownComputadores" role="button" data-toggle="dropdown" href="#">Computadores</a>
+                    <ul class="dropdown-menu multi-column columns-2" aria-labelledby="DropdownComputadores" style="background-color:#ff9b21;">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="multi-column-dropdown">
+                                    <li><a href="#">Placa de video</a></li>
+                                    <li><a href="#">Placa Mãe</a></li>
+                                    <li><a href="#">Processadores</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="multi-column-dropdown">
+                                    <li><a href="#">Gabinete</a></li>
+                                    <li><a href="#">Cooler</a></li>
+                                    <li><a href="#">LED</a></li>
+                                </ul>
+                            </div>
+                        </div>                  
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Smartphones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Periféricos</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Login/Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="barra1"></div>
+    <div class="barra2"></div>
+    
+    <div class="container my-5" id="test">    
+        <div class="row">
+
+            <div id="cadastro" class="col-8 ml-2">
+                <h1>Cadastre-se</h1>
+                <p class="lead">Compre hardware na KabumTega!!</p>
+                <form action="">
+                    <div class="form-row">
+                        
+                        <div class="form-group col-6">
+                            <label for="inputEmail">Digite seu email:</label>
+                            <input name="cadastroEmail" type="text" class="form-control" id="inputEmail" placeholder="exemplo@gmail.com">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="inputNome">Digite seu nome:</label>
+                            <input name="cadastroNome" type="text" class="form-control" id="inputNome" placeholder="Fulano de fulenagem">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="inputSenha">Senha:</label>
+                            <input name="cadastroSenha" type="password" class="form-control" id="inputSenha" placeholder="Secreta">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Data:</label>
+                            <div class="row">
+                                <div class="col" style="padding: 0px 0px 0px 15px;">
+                                    <select name="cadastroDia" class="form-control" placeholder="">Dia
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            <option>13</option>
+                                            <option>14</option>
+                                            <option>15</option>
+                                            <option>16</option>
+                                            <option>17</option>
+                                            <option>18</option>
+                                            <option>19</option>
+                                            <option>20</option>
+                                            <option>21</option>
+                                            <option>22</option>
+                                            <option>23</option>
+                                            <option>24</option>
+                                            <option>25</option>
+                                            <option>26</option>
+                                            <option>27</option>
+                                            <option>28</option>
+                                            <option>29</option>
+                                            <option>30</option>
+                                            <option>31</option>
+                                    </select>
+                                </div>
+                                <div class="col" style="padding: 0px;">
+                                    <select name="cadastroMes" class="form-control" aria-placeholder="dia">
+                                            <option>Janeiro</option>
+                                            <option>Fevereiro</option>
+                                            <option>Março</option>
+                                            <option>Abril</option>
+                                            <option>Maio</option>
+                                            <option>Junho</option>
+                                            <option>Julho</option>
+                                            <option>Agosto</option>
+                                            <option>Setembro</option>
+                                            <option>Outubro</option>
+                                            <option>Novembro</option>
+                                            <option>Dezembro</option>
+                                    </select>
+                                </div>
+                                <div class="col" style="padding: 0px 15px 0px 0px;">
+                                    <select name="cadastroAno" class="form-control" aria-placeholder="dia">
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                            <option>2015</option>
+                                            <option>2014</option>
+                                            <option>2013</option>
+                                            <option>2012</option>
+                                            <option>2011</option>
+                                            <option>2010</option>
+                                            <option>2009</option>
+                                            <option>2008</option>
+                                            <option>2007</option>
+                                            <option>2006</option>
+                                            <option>2005</option>
+                                            <option>2004</option>
+                                            <option>2003</option>
+                                            <option>2002</option>
+                                            <option>2001</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                            <div class="form-group col-4">
+                                    <label for="inputCPF">CPF:</label>
+                                    <input name="cadastroCPF" type="number" class="form-control" id="inputCPF">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="inputRG">RG:</label>
+                                <input name="cadastroRG" type="number" class="form-control" id="inputRG">
+                            </div>
+                          
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" name="cadastroEndereco" placeholder="Endereço completo">
+                        </div>
+                        <div class="form-group col">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" name="cadastroCidade" placeholder="São Paulo">
+                        </div>
+                        <div class="form-group col">
+                            <label for="estado">Estado</label>
+                            <select name="cadastroEstado" class="form-control" placeholder="">Dia
+                                    <option>RS</option>
+                                    <option>SC</option>
+                                    <option>PR</option>
+                                    <option>SP</option>
+                                    <option>RJ</option>
+                                    <option>ES</option>
+                                    <option>MG</option>
+                                    <option>BA</option>
+                                    <option>SE</option>
+                                    <option>AL</option>
+                                    <option>PE</option>
+                                    <option>PB</option>
+                                    <option>RN</option>
+                                    <option>CE</option>
+                                    <option>PI</option>
+                                    <option>MA</option>
+                                    <option>TO</option>
+                                    <option>PA</option>
+                                    <option>AP</option>
+                                    <option>RR</option>
+                                    <option>AM</option>
+                                    <option>AC</option>
+                                    <option>RO</option>
+                                    <option>MT</option>
+                                    <option>GO</option>
+                                    <option>DF</option>
+                                    <option>MS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                            <div class="form-group col-4">
+                                    <label for="inputCPF">CEP:</label>
+                                    <input name="cadastroCEP" type="number" class="form-control" id="inputCEP">
+                            </div>
+                            <div class="form-group col-4">
+                                    <div class="form-group">
+                                        <label for="foto">Escolha uma foto:</label>
+                                        <input type="file" class="form-control-file" name="cadastroFoto" id="foto">
+                                    </div>
+                            </div>  
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-warning btn-lg text-light ml-2">Criar Conta</button> 
+                    </div>
+                </form>
+            </div>
+
+            <div id="login" class="col">
+               <h1>Entrar</h1>
+               <p class="lead">Já possui uma conta? Entre e vá para as compras!!</p>
+               <form action="">
+                    <div class="form-row">
+                        <label for="inputEmail">Email:</label>
+                        <input name="loginEmail" type="text" class="form-control" id="inputEmail">
+                    </div>
+                    <div class="form-row">
+                        <label for="loginSenha">Senha:</label>
+                        <input name="loginSenha" type="password" class="form-control" id="inputSenha">
+                    </div>
+                    <div class="form-row my-3">
+                        <button type="submit" class="btn btn-warning btn-lg btn-block text-light ml-2">Entrar</button>    
+                    </div>
+               </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="cadastroLogin">&copy; KambumTega</footer>
+
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script> 
+</body>
+</html>
