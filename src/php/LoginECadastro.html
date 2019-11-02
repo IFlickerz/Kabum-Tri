@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="../style/MeuStyle.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../style/MultiDropdown.css"> 
+    <link rel="icon" href="../img/Kt.png">
 </head>
 <body id="pageCadastro">
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
-        <a class="navbar-brand" href="#">
-            <img src="../img/Kt.png"  width="40" height="40" class="d-inline-block-top mr-2" id="logo">KabumTega
+        <a class="navbar-brand" href="MainPage.html" style="font-size: 40px;">
+            <img src="../img/Kt.png"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTega
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
             <span class="navbar-toggler-icon"></span>
@@ -53,6 +54,18 @@
             </ul>
         </div>
     </nav>
+    <div class="searchContainer">
+            <div class="container">
+                <form class="ml-4 mr-4 my-auto d-inline w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-right-0" placeholder="Buscar"> 
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary border-left-0" type="button" id="btnSearch">IR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     <div class="barra1"></div>
     <div class="barra2"></div>
     
@@ -62,7 +75,7 @@
             <div id="cadastro" class="col-8 ml-2">
                 <h1>Cadastre-se</h1>
                 <p class="lead">Compre hardware na KabumTega!!</p>
-                <form action="" method="POST">
+                <form action="cadastroCliente.php" method="POST">
                     <div class="form-row">
                         
                         <div class="form-group col-6">
@@ -80,7 +93,7 @@
                             <input name="cadastroSenha" type="password" class="form-control" id="inputSenha" placeholder="Secreta">
                         </div>
                         <div class="form-group col-6">
-                            <label>Data:</label>
+                            <label>Data de nascimento:</label>
                             <div class="row">
                                 <div class="col" style="padding: 0px 0px 0px 15px;">
                                     <select name="cadastroDia" class="form-control" placeholder="">Dia
@@ -214,14 +227,14 @@
                     </div>
                     <div class="form-row">
                             <div class="form-group col-4">
-                                    <label for="inputCPF">CEP:</label>
-                                    <input name="cadastroCEP" type="number" class="form-control" id="inputCEP">
+                                <label for="inputCPF">CEP:</label>
+                                <input name="cadastroCEP" type="number" class="form-control" id="inputCEP">
                             </div>
                             <div class="form-group col-4">
-                                    <div class="form-group">
-                                        <label for="foto">Escolha uma foto:</label>
-                                        <input type="file" class="form-control-file" name="cadastroFoto" id="foto">
-                                    </div>
+                                <div class="form-group">
+                                    <label for="foto">Escolha uma foto:</label>
+                                    <input type="file" class="form-control-file" name="cadastroFoto" id="foto">
+                                </div>
                             </div>  
                     </div>
                     <div class="form-row">
@@ -233,7 +246,7 @@
             <div id="login" class="col">
                <h1>Entrar</h1>
                <p class="lead">Já possui uma conta? Entre e vá para as compras!!</p>
-               <form action="" method="POST">
+               <form action="logarCliente.php" method="POST">
                     <div class="form-row">
                         <label for="inputEmail">Email:</label>
                         <input name="loginEmail" type="text" class="form-control" id="inputEmail">
@@ -251,9 +264,6 @@
     </div>
 
     <footer id="cadastroLogin">&copy; KambumTega</footer>
-
-
-
 
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.js"></script>
