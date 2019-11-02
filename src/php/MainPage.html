@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/carousel.css">
+    <link rel="stylesheet" href="../style/mainpage.css">
     <link rel="stylesheet" href="../style/MultiDropdown.css"> 
     <link rel="stylesheet" href="../style/MeuStyle.css"> 
-    <title>Kabum Tega</title>
+    <link rel="icon" href="../img/Kt.png">
+    <title>KabumTega</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
-        <a class="navbar-brand" href="#">
-            <img src="../img/Kt.png"  width="40" height="40" class="d-inline-block-top mr-2" id="logo">KabumTega
+        <a class="navbar-brand" href="MainPage.html" style="font-size: 40px;">
+            <img src="../img/kticon_yoA_2.ico"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTega
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
             <span class="navbar-toggler-icon"></span>
@@ -26,7 +27,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <ul class="multi-column-dropdown">
-                                    <li><a href="#">Placa de video</a></li>
+                                    <li><a href="#">Placa de vídeo</a></li>
                                     <li><a href="#">Placa Mãe</a></li>
                                     <li><a href="#">Processadores</a></li>
                                 </ul>
@@ -56,6 +57,18 @@
             </ul>
         </div>
     </nav>
+    <div class="searchContainer">
+        <div class="container">
+            <form class="ml-4 mr-4 my-auto d-inline w-100">
+                <div class="input-group">
+                    <input type="text" class="form-control border-right-0" placeholder="Buscar"> 
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary border-left-0" type="button" id="btnSearch">IR</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="barra1"></div>
     <div class="barra2"></div>
 
@@ -73,7 +86,7 @@
                 <img src="../img/HyperX-Cloud-Revolver-S-0.jpg" class="ImageCarousel d-block w-100" alt="carouselRevolver">
             </div>
             <div class="carousel-item">
-                <img src="../img/1539009650_intel_ninth_gen_2.jpg" class="ImageCarousel d-block w-100" alt="carouselINOVE">
+                <img src="../img/07-intel.jpg" class="ImageCarousel d-block w-100" alt="carouselINOVE">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -85,6 +98,41 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <div class="barra2"></div>
+    <div class="espaco"></div>
+    <div class="barra1"></div>
+    <div class="container">
+        <div class="recomendTitle"><a class="recomendados">Recomendados</a></div>
+        <div class="card-deck">
+            <div class="card">
+                <img src="../img/geforce-rtx-2080-super-gallery-thumbnail-b-D@2x.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">NVIDIA RTX 2080 TI</h5>
+                    <p class="card-text">Essa é a placa de vídeo mais avançada já feita, possuí um poder de processamento de outro planeta! Além, é claro, da tecnologia RAY TRACING.</p>
+                    <a href="#" class="btn btn-primary">TENHO INTERESSE!</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/HyperX-Cloud-Revolver-S-0.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">HyperX Cloud Revolver S</h5>
+                    <p class="card-text">Uma das maiores marcas do mercado inovando novamente e superando espectativas com o novo Cloud Revolver S da HyperX!</p>
+                    <a href="#" class="btn btn-primary">TENHO INTERESSE!</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../img/2002831.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">I9-9900K Skylake</h5>
+                    <p class="card-text">Experimente o que é poder de processamento com a nova linha de processadores I9 da 9ª geração. Diga adeus aos gargalos!</p>
+                    <a href="#" class="btn btn-primary">TENHO INTERESSE!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="barra1" style="margin-top: 10vh"></div>
+    <div class="espaco"></div>
+    <div class="barra2"></div>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

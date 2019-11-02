@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 
+header, body {
+    font-family: 'Staatliches', cursive;
+    
+}
 
 #navbarSKT{
     background-color: #ff9b21;
@@ -18,4 +23,20 @@
 .barra2{
     background-color: #2e66ff;
     height: 10px;
+}
+
+.nav-item{
+    font-size: 20px;
+}
+
+#btnSearch{
+    background-color: white;
+}
+
+#btnSearch:hover{
+    background-color: #2e66ff;
+}
+
+.searchContainer{
+    background-color: #ff9b21;
 }
