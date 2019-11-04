@@ -59,7 +59,7 @@
         if($insertId){
             $result = mysqli_insert_id($link);
         }
-
+        
         DBClose($link);
 
         return $result;

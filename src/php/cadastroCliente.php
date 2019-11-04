@@ -17,11 +17,10 @@
         $cidade = isset($_POST['cadastroCidade']) ? $_POST['cadastroCidade'] : null;
         $estado = isset($_POST['cadastroEstado']) ? $_POST['cadastroEstado'] : null;
         $CEP = isset($_POST['cadastroCEP']) ? $_POST['cadastroCEP'] : null;
-        $foto = isset($_FILES['cadastroFoto']['name']) ? $_POST['cadastroFoto']['name'] : null;
+        $foto = isset($_FILES['cadastroFoto']['name']) ? $_FILES['cadastroFoto']['name'] : null;
         $dataDeNascimento = "{$dia}/{$mes}/${ano}";
-        
-     
 
+    
         function calcularIdade( $dia, $mes, $ano){
             $data = date("d/m/Y");
             $idade;
@@ -80,28 +79,37 @@
         }
 
         $cliente = array(
-            'email' => "{$email}",
-            'cpf' => "{$CPF}",
-            'senha' => "{$senha}",
-            'nome' => "{$nome}",
-            'rg' => "{$RG}",
-            'idade' => "{$idade}",
-            'datadenascimento' => "{$dataDeNascimento}",
-            'foto' => "{$foto}"
+            'Email' => "{$email}",
+            'CPF' => "{$CPF}",
+            'Senha' => "{$senha}",
+            'Nome' => "{$nome}",
+            'RG' => "{$RG}",
+            'Idade' => "{$idade}",
+            'DataDeNascimento' => "{$dataDeNascimento}",
+            'Foto' => "{$foto}"
         );
 
         $idCliente = DBCreate('cliente',$cliente, true);
-
+        move_uploaded_file($_FILES['cadastroFoto']['tmp_name'],
+        "uploadsFiles/".$_FILES['cadastroFoto']['name']);
+        $cliente['Id_cliente'] = "{$idCliente}";
         $endereco = array(
-            'estado' => "{$estado}",
-            'endereco' => "{$endereco}",
-            'cidade' => "{$cidade}",
-            'cep' => "{$CEP}",
-            'id_cliente' => "{$idCliente}"
+            'Estado' => "{$estado}",
+            'Endereco' => "{$endereco}",
+            'Cidade' => "{$cidade}",
+            'CEP' => "{$CEP}",
+            'Id_cliente' => "{$idCliente}"
         );
 
+        $arrayCliente = array(
+            0 => $cliente,
+        );
+        session_start();
+        $_SESSION['user'] = $arrayCliente;
+
        DBCreate('endereco',$endereco);
-        header('Location:MainPage.html');   
+        header('Location:Perfil.php');   
+        
 ?>
 
 
