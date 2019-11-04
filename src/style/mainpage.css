@@ -23,11 +23,6 @@
     margin-bottom: 10vh;
 }
 
-.btn-primary{
-    background-color: #ff9b21;
-    border-color: #eb8f1e;
-}
-
 .btn-primary:hover{
     background-color: #28a745;
     border-color: #28a745;
