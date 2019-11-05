@@ -16,8 +16,9 @@
         session_start();
         $endereco = DBRead('endereco',"WHERE id_cliente = {$_SESSION['user'][0]['Id_cliente']}");
     ?>
+    <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
-            <a class="navbar-brand" href="MainPage.html" style="font-size: 40px;">
+            <a class="navbar-brand" href="MainPage.php" style="font-size: 40px;">
                 <img src="../img/Kt.png"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTega
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
@@ -31,38 +32,36 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <ul class="multi-column-dropdown">
-                                        <li><a href="#">Placa de video</a></li>
-                                        <li><a href="#">Placa Mãe</a></li>
-                                        <li><a href="#">Processadores</a></li>
+                                        <li><a href="Produtos.php?type=Placadevideo">Placa de video</a></li>
+                                        <li><a href="Produtos.php?type=Placamae">Placa Mãe</a></li>
+                                        <li><a href="Produtos.php?type=Processador">Processadores</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6">
                                     <ul class="multi-column-dropdown">
-                                        <li><a href="#">Gabinete</a></li>
-                                        <li><a href="#">Cooler</a></li>
-                                        <li><a href="#">LED</a></li>
+                                        <li><a href="Produtos.php?type=Gabinete">Gabinete</a></li>
+                                        <li><a href="Produtos.php?type=Cooler">Cooler</a></li>
+                                        <li><a href="Produtos.php?type=Led">LED</a></li>
                                     </ul>
                                 </div>
                             </div>                  
                         </ul>
                     </li>
-    
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Smartphones</a>
+                        <a class="nav-link" href="Produtos.php?type=Smartphones">Smartphones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Periféricos</a>
+                        <a class="nav-link" href="Produtos.php?type=Periferico">Periféricos</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <?php
-                            if(isset($_SESSION['user'])){
-                                echo '<a class='."nav-link".'href="">'.$_SESSION['user'][0]['Nome'].'</a>';
-                            } else {
-                                echo '<a class="nav-link" href="">Login/Register</a>';
-                            }  
-                        ?>
+                        <?php if(isset($_SESSION['user'])) : ?>
+                            <a class="nav-link" href="Perfil.php"><?= $_SESSION['user'][0]['Nome']?> </a>
+                        <?php else : ?>
+                            <a class="nav-link" href="LoginECadastro.html">Login/Register</a>
+                        <?php endif;?>
                     </li>
                 </ul>
             </div>
@@ -82,6 +81,8 @@
         <div class="barra1"></div>
         <div class="barra2"></div>
     
+    
+    <!-- Perfil -->
     <div class="container my-3" id="test">
         <div>
             <h1>Perfil:</h1>
@@ -170,6 +171,9 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Botões -->
     <div class="container my-3">
         <div class="row">
             <div class="col">
@@ -179,11 +183,14 @@
                 
             </div>
             <div class="col">
-                <form action="">
+                <form action="atualizar.php">
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Atualizar</button>
                 </form>
             </div>
         </div>
     </div>
+    <footer id="cadastroLogin">  
+            <a href="deleteCliente.php?sair=true" class="btn  btn-link btn-lg">Sair</button> 
+    </footer>
 </body>
 </html>

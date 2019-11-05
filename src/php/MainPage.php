@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="../style/MeuStyle.css"> 
     <link rel="icon" href="../img/Kt.png">
     <title>KabumTega</title>
+    <?php session_start(); ?>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
         <a class="navbar-brand" href="MainPage.html" style="font-size: 40px;">
-            <img src="../img/kticon_yoA_2.ico"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTega
+            <img src="../img/Kt.png"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTega
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
             <span class="navbar-toggler-icon"></span>
@@ -22,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarKT" >
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a  class="nav-link dropdown-toggle" id="DropdownComputadores" role="button" data-toggle="dropdown" href="#">Computadores</a>
+                    <a class="nav-link dropdown-toggle" id="DropdownComputadores" role="button" data-toggle="dropdown" href="#">Computadores</a>
                     <ul class="dropdown-menu multi-column columns-2" aria-labelledby="DropdownComputadores" style="background-color:#ff9b21;">
                         <div class="row">
                             <div class="col-sm-6">
@@ -42,7 +44,7 @@
                         </div>                  
                     </ul>
                 </li>
-        
+
                 <li class="nav-item">
                     <a class="nav-link" href="Produtos.php?type=Smartphones">Smartphones</a>
                 </li>
@@ -52,11 +54,16 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="LoginECadastro.html">Login/Register</a>
+                    <?php if(isset($_SESSION['user'])) : ?>
+                        <a class="nav-link" href="Perfil.php"><?= $_SESSION['user'][0]['Nome']?> </a>
+                    <?php else : ?>
+                        <a class="nav-link" href="LoginECadastro.html">Login/Register</a>
+                    <?php endif;?>
                 </li>
             </ul>
         </div>
     </nav>
+
     <div class="searchContainer">
         <div class="container">
             <form class="ml-4 mr-4 my-auto d-inline w-100">
@@ -133,6 +140,8 @@
     <div class="barra1" style="margin-top: 10vh"></div>
     <div class="espaco"></div>
     <div class="barra2"></div>
+
+    
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
