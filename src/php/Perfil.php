@@ -19,7 +19,7 @@
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
             <a class="navbar-brand" href="MainPage.php" style="font-size: 40px;">
-                <img src="../img/Kt.png"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTega
+                <img src="../img/Kt.png"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTri
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
                 <span class="navbar-toggler-icon"></span>
