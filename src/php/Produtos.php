@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../style/MeuStyle.css">
     <link rel="stylesheet" href="../style/mainpage.css">
     <link rel="icon" href="../img/Kt.png">
-    <title>KabumTega</title>
+    <title>KabumTri</title>
 </head>
 <body>
     <?php
@@ -20,7 +20,7 @@
     ?>
     <nav class="navbar navbar-expand-lg navbar-light" id="navbarSKT">
             <a class="navbar-brand" href="MainPage.html" style="font-size: 40px;">
-                <img src="../img/kticon_yoA_2.ico"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTega
+                <img src="../img/kticon_yoA_2.ico"  width="50" height="50" class="d-inline-block-top mr-2" id="logo">KabumTri
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKT">
                 <span class="navbar-toggler-icon"></span>
